@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: NodeJs ci pipeline
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
@@ -6,8 +6,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Welcome to github Actions"
+
+      - name: checkout
+      - user: actions/checkout@v2
+
+      # To be replaced with actul code
       - name: Build Code
       - run:  echo "Build code"
+
+      # To be replaced with actul code
+      - name: testing
+      - run: echo "Test the code"
+
+      # To be replaced with actul code
+      - name: deploy
+      - run: echo "deploy to Dev"
+      
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
